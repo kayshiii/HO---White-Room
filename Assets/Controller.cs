@@ -26,6 +26,10 @@ public class FPSController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Increase the slope limit and step offset
+        characterController.slopeLimit = 78f;  // Default is 45 degrees
+        characterController.stepOffset = 0.7f; // Default is 0.3 meters
     }
 
     void Update()
